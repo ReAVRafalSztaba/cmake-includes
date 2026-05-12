@@ -48,7 +48,7 @@ if (DEFINED IPP_ROOT)
             # Use -Wl to pass library flags directly to linker, bypassing driver issues
             # ippcore must come last as other libs depend on it
             target_link_options(SharedCode INTERFACE
-                "SHELL:-Xarch_x86_64 -Wl,-L${IPP_LIB},-lipps,-lippi,-lippcv,-lippvm,-lippcore"
+                "SHELL:-Xarch_x86_64 \"-Wl,-L${IPP_LIB},-lipps,-lippi,-lippcv,-lippvm,-lippcore\""
             )
         else()
             target_link_directories(SharedCode INTERFACE "${IPP_LIB}")
