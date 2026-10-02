@@ -2,7 +2,7 @@
 # This must be set before the project() call
 # see: https://cmake.org/cmake/help/latest/variable/CMAKE_OSX_DEPLOYMENT_TARGET.html
 # FORCE must be set, see https://stackoverflow.com/a/44340246
-set(CMAKE_OSX_DEPLOYMENT_TARGET "10.14" CACHE STRING "Support macOS down to Mojave" FORCE)
+set(CMAKE_OSX_DEPLOYMENT_TARGET "12.0" CACHE STRING "Support macOS down to Monterey" FORCE)
 
 # Audio Units must include an x86_64 slice to load in Intel hosts or hosts
 # running under Rosetta on Apple Silicon. Release/packaging keeps this ON;
